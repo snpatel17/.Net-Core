@@ -1,11 +1,11 @@
-﻿using System;
+﻿using DisneyCloneWebAPI.Data;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace DisneyCloneWebAPI.Repository
 {
-    interface IMovieRepository
+   public interface IMovieRepository
     {
+        Task<List<MovieModel>> GetAllMovieAsync();
     }
 }

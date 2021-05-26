@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DisneyCloneWebAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace DisneyCloneWebAPI.Controllers
@@ -11,5 +8,18 @@ namespace DisneyCloneWebAPI.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
+        private readonly IMovieRepository _movieRepository;
+
+        public MoviesController(IMovieRepository movieRepository)
+        {
+            _movieRepository = movieRepository;
+        }
+
+        [HttpGet ("")]
+        public async Task<IActionResult> GetAllMovies()
+        {
+            var movies =await  _movieRepository.GetAllMovieAsync();
+            return Ok(movies);
+        }
     }
 }
