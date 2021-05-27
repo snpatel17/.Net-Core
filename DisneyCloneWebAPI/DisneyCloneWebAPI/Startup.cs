@@ -55,9 +55,10 @@ namespace DisneyCloneWebAPI
 
             app.UseAuthorization();
 
+            //@desc Map Controllers 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

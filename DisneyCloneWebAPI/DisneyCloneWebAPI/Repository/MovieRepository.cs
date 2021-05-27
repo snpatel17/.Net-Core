@@ -29,5 +29,22 @@ namespace DisneyCloneWebAPI.Repository
 
             return records;
         }
+
+        public async Task<MovieModel> GetMoviebyIdAsync(int movieId)
+        {
+            var records = await _context.Movies.Where(x =>x.MovieId == movieId).Select(x=> new MovieModel()
+            {
+                MovieId = x.MovieId,
+                BackgroundImg = x.BackgroundImg,
+                CardImg = x.CardImg,
+                Description = x.Description,
+                SubTitle = x.SubTitle,
+                Title = x.Title,
+                TitleImg = x.TitleImg,
+                Type = x.Type
+            }).FirstOrDefaultAsync();
+
+            return records;
+        }
     }
 }

@@ -70,3 +70,4 @@ D:\.Net-Core\DisneyCloneWebAPI\DisneyCloneWebAPI\obj\Debug\net5.0\ref\DisneyClon
 D:\.Net-Core\DisneyCloneWebAPI\DisneyCloneWebAPI\obj\Debug\net5.0\DisneyCloneWebAPI.pdb
 D:\.Net-Core\DisneyCloneWebAPI\DisneyCloneWebAPI\obj\Debug\net5.0\DisneyCloneWebAPI.genruntimeconfig.cache
 D:\.Net-Core\DisneyCloneWebAPI\DisneyCloneWebAPI\obj\Debug\net5.0\DisneyCloneWebAPI.csprojAssemblyReference.cache
+D:\.Net-Core\DisneyCloneWebAPI\DisneyCloneWebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll

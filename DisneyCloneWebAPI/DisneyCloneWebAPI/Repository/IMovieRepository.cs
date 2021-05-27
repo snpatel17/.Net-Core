@@ -7,5 +7,6 @@ namespace DisneyCloneWebAPI.Repository
    public interface IMovieRepository
     {
         Task<List<MovieModel>> GetAllMovieAsync();
+        Task<MovieModel> GetMoviebyIdAsync(int movieId);
     }
 }
