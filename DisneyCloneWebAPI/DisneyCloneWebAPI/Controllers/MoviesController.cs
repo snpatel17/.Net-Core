@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using DisneyCloneWebAPI.Data;
 
 namespace DisneyCloneWebAPI.Controllers
 {
@@ -30,6 +31,13 @@ namespace DisneyCloneWebAPI.Controllers
         {
             var movie = await _movieRepository.GetAllMovieAsync();
             return Ok(movie);
+        }
+
+        [HttpGet("")]
+        public async Task<IActionResult> AddNewMovie([FromBody] MovieModel moviemodel)
+        {
+            var id = await _movieRepository.AddMovieAsync(moviemodel);
+            return CreatedAtAction(nameof(GetMoviesById),new { id = id, controller = "Movies" },id );
         }
     }
 }
