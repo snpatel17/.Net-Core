@@ -63,5 +63,23 @@ namespace DisneyCloneWebAPI.Repository
            await _context.SaveChangesAsync();
             return movie.MovieId;
         }
+
+        public async Task UpdateMovieAsync(int MovieId, MovieModel movieModel)
+        {
+            var movie = await _context.Movies.FindAsync(MovieId);
+            if (movie != null)
+            {
+                movie.BackgroundImg = movieModel.BackgroundImg;
+                movie.CardImg = movieModel.CardImg;
+                movie.Description = movieModel.Description;
+                movie.SubTitle = movieModel.SubTitle;
+                movie.Title = movieModel.Title;
+                movie.TitleImg = movieModel.TitleImg;
+                movie.Type = movieModel.Type;
+
+                await _context.SaveChangesAsync();
+              }
+           
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace DisneyCloneWebAPI.Repository
         Task<List<MovieModel>> GetAllMovieAsync();
         Task<MovieModel> GetMoviebyIdAsync(int movieId);
         Task<int> AddMovieAsync(MovieModel movieModel);
+        Task UpdateMovieAsync(int MovieId, MovieModel movieModel);
     }
 }

@@ -39,5 +39,11 @@ namespace DisneyCloneWebAPI.Controllers
             var id = await _movieRepository.AddMovieAsync(moviemodel);
             return CreatedAtAction(nameof(GetMoviesById),new { id = id, controller = "Movies" },id );
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Updatevie([FromBody] MovieModel moviemodel, [FromRoute] int id)
+        {
+            await _movieRepository.UpdateMovieAsync(id,moviemodel);
+            return Ok();
+        }
     }
 }
