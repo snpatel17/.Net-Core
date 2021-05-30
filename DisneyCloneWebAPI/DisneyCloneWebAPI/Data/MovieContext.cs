@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DisneyCloneWebAPI.Model;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace DisneyCloneWebAPI.Data
 {
-    public class MovieContext : DbContext
+    public class MovieContext : IdentityDbContext<ApplicationUser>
     {
         public MovieContext(DbContextOptions<MovieContext> options)
             : base(options)

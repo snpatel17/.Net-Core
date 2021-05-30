@@ -1,4 +1,5 @@
 ﻿using DisneyCloneWebAPI.Data;
+using DisneyCloneWebAPI.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;

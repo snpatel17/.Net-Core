@@ -1,4 +1,5 @@
 ﻿using DisneyCloneWebAPI.Data;
+using DisneyCloneWebAPI.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

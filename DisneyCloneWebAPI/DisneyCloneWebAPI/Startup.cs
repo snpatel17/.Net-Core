@@ -1,7 +1,9 @@
 using DisneyCloneWebAPI.Data;
+using DisneyCloneWebAPI.Model;
 using DisneyCloneWebAPI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,10 +25,14 @@ namespace DisneyCloneWebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MovieContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DisneyCloneDB")));
-            
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<MovieContext>()
+                .AddDefaultTokenProviders();
             services.AddRazorPages();
             services.AddControllers();
             services.AddTransient<IMovieRepository, MovieRepository>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
         private void UseSqlServer(string v)

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using DisneyCloneWebAPI.Data;
+using DisneyCloneWebAPI.Model;
 
 namespace DisneyCloneWebAPI.Controllers
 {
