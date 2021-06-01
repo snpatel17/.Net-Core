@@ -14,11 +14,11 @@ https://github.com/snpatel17/disney-plus-clone
 
 
 display movies on home page
-https://github.com/snpatel17/.Net-Core/blob/main/Website%20SS/ss_home%20page.PNG
+![alt text](https://github.com/snpatel17/.Net-Core/blob/main/Website%20SS/ss_home%20page.PNG)
 
 
 content page
-https://github.com/snpatel17/.Net-Core/blob/main/Website%20SS/ss_detail%20page.PNG
+![alt text](https://github.com/snpatel17/.Net-Core/blob/main/Website%20SS/ss_detail%20page.PNG)
 
 Crud operations tested using postman
 
