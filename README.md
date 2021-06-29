@@ -1,7 +1,7 @@
 # .Net-Core
 
 Used Technologies:
- .Net-Core 5.0
+ .Net-Core 5.0,
  React
 
 Databasae:
