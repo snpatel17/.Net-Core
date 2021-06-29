@@ -21,7 +21,7 @@ Display movies on home page:
 
 Content page:
 
-![alt text](https://github.com/snpatel17/.Net-Core/blob/main/Website%20SS/ss_detail%20page.PNG)
+![alt text](https://github.com/snpatel17/.Net-Core/blob/main/Website%20SS/ssdetail%20page.PNG)
 
 
 
